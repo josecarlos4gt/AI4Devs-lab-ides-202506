@@ -18,3 +18,17 @@ model User {
   email String  @unique
   name  String?
 }
+
+model Candidato {
+  id                 Int      @id @default(autoincrement())
+  nombre             String
+  apellido           String
+  correoElectronico  String   @unique
+  telefono           String
+  direccion          String
+  educacion          Json     // Array de objetos: { institucion: string, titulo: string, fechaInicio: DateTime, fechaFin?: DateTime }
+  experienciaLaboral Json     // Array de objetos: { empresa: string, puesto: string, fechaInicio: DateTime, fechaFin?: DateTime, descripcion?: string }
+  cvUrl              String?  // URL del CV subido (opcional)
+  fechaCreacion      DateTime @default(now())
+  fechaActualizacion DateTime @updatedAt
+}

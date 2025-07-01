@@ -93,3 +93,4 @@ Para detener el contenedor Docker, ejecuta el siguiente comando:
 ```
 docker-compose down
 ```
+http://localhost:3000/login, inicia sesión con usuario admin y contraseña admin123.
